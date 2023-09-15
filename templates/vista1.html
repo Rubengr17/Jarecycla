@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+<title>Ja Recycla</title>
+</head>
+
+<body class="bg-gradient-to-t from-emerald-800 via-emerald-700 to-emerald-600">
+    <div class="flex flex-col justify-center items-center">
+      <div class="w-1/4 flex justify-center">
+        <img src="{{url_for('static', filename='image/jalogoof.png')}}" alt="Logo" class="object-center w-56 ">
+      </div>
+      <main class="flex-grow flex items-center justify-center">
+        <div class="flex gap-[3rem] items-center w-[85%] h-[65.3vh]">
+          <img src="{{url_for('static', filename='image/personas.png')}}" alt="Imagen" class="w-1/2">
+          <div class="text-2xl drop-shadow-xl">
+
+            <h2 class="text-green-500 font-semibold text-shadow mb-6 text-6xl">GANA RECICLANDO!</h2>
+            <form action="/vista1" method="post">
+              <label for="cedula" class="block font-semibold text-white">Cédula: </label>
+              <input class="w-full border rounded mb-6 p-1 text-base" type="number" name="cedula" id= "cedula" placeholder="Ingresa tu cédula" required>
+              <button type= "submit"   class=" flex justify-center from-emerald-400 p-6 bg-green-100  hover:bg-green-500 text-base font-medium text-center text-emerald-600 transition duration-150 ease-in-out text-2xl font-semibold mb-3 rounded-xl border-2 border-white border-opacity-80">Enviar</button>
+          </div>
+        </div>
+          </form>
+        <div class="p-7">
+          
+        </div>
+
+      </main>
+
+    </div>
+    <div class="p-3">
+          
+    </div>
+
+</body>
+</html>
+
+

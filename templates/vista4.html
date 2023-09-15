@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-t from-emerald-800 via-emerald-700 to-emerald-600 bg-auto">
+    <div class="flex flex-col justify-center items-center">
+        <div>
+                <img class="object-center w-auto"
+                src="{{url_for('static', filename='image/nombreof.png')}}">
+        </div>
+        <div class="object-center p-4"> 
+            <img class="h-80 mx-auto"
+            src="https://www.pngkey.com/png/full/21-215619_checkmark-in-circle-clip-white-check-mark-symbol.png">
+        </div>
+
+        <div class="text-center p-4">
+            <p class="text-4xl text-white font-semibold">
+            Su registro fue realizado con éxito!
+            </p>
+        </div>
+    
+        <div class="flex justify-center mt-4 p-5 space-x-4">
+            <button type="submit" class="p-6 bg-green-100  hover:bg-green-500 text-base font-medium text-center text-emerald-600 transition duration-150 ease-in-out text-2xl font-semibold mb-3 rounded-xl border-2 border-white border-opacity-80"> Imprimir comprobante
+            </button>
+  
+            <button type="submit"  class="p-5 bg-green-100  hover:bg-green-500 text-base font-medium text-center text-emerald-600 transition duration-150 ease-in-out text-2xl font-semibold mb-3 rounded-xl border-2 border-white border-opacity-80"> <a href="/generar_qr/{{cedula}}">Generar QR</a>
+            </button>
+            
+         </div>
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="bg-gradient-to-t from-emerald-800 via-emerald-700 to-emerald-600">
+        <header class="flex justify-center">
+                <img class="object-center justify-left w-56"
+                src="{{url_for('static', filename='image/jalogoof.png')}}">
+        </header>
+
+    <div class="flex items-center justify-center flex-grow">
+        <img class="object-center w-80"
+        src="{{url_for('static', filename='image/basurero_botellas.png')}}">
+        <div class="text-2xl drop-shadow-xl">
+          <p class="text-4xl text-white font-semibold p-6"> Escanea el QR </p>
+          <img class="object-center w-80"
+          src="{{qr_image_url}}">
+          </div>
+    </div>
+
+    <div>
+      <p class="text-white text-3xl font-semibold text-center">GRACIAS POR SUMARTE AL IMPACTO! #JaRecycla</p>
+    </div>
+
+  <script>
+    // Obtiene una referencia al contenedor del código QR
+    const qrCodeContainer = document.getElementById('qrCodeContainer');
+
+    // Obtiene una referencia a la imagen donde se mostrará el código QR
+    const qrImage = document.getElementById('qrImage');
+
+    // Escucha el evento 'load' para cargar el código QR automáticamente al cargar la página
+    window.addEventListener('load', async () => {
+      const response = await fetch('/qr');
+      const blob = await response.blob();
+      const imageUrl = URL.createObjectURL(blob);
+      
+      qrImage.src = imageUrl;
+      qrCodeContainer.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
