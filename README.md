@@ -8,8 +8,4 @@ Coaches
 Participantes
 
 - Gio Amaini
-- Rodrigo
 - Ruben Guerreros
-- Monica
-- Camilo Navarro
-- Gerardo Perez
